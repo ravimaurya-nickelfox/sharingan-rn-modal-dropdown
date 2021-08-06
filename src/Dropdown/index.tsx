@@ -129,6 +129,8 @@ const Dropdown: React.FC<IDropdownProps> = props => {
     if (!Lo.isEmpty(data) && value) {
       const lFilter = Lo.filter(data, { value: value })[0];
       if (!Lo.isEmpty(lFilter)) setLabelV(lFilter.label);
+    } else {
+      setLabelV("")
     }
   }, [value, data]);
 
